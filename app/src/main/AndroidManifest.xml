@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android.permission.FOREGROUND_SERVICE />
+    <uses-permission android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Solitaire Move Helper"
-        android:theme="@style/Theme.Material3.DayNight">
+        android:label="Solitaire Helper"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
 
         <activity
             android:name=".MainActivity"
@@ -21,11 +19,6 @@
             </intent-filter>
         </activity>
 
-        <service
-            android:name=".ScreenCaptureService"
-            android:enabled="true"
-            android:exported="false"
-            android:foregroundServiceType="mediaProjection" />
-
     </application>
+
 </manifest>
